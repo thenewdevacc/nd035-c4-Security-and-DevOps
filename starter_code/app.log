@@ -1,0 +1,38 @@
+2020-12-22 21:35:07,616 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on DESKTOP-QCVN3ET with PID 2900 (C:\Projects\ecommerce\nd035-c4-Security-and-DevOps\starter_code\target\classes started by anubh in c:\Projects\ecommerce\nd035-c4-Security-and-DevOps\starter_code)
+2020-12-22 21:35:07,624 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2020-12-22 21:35:08,702 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-22 21:35:08,928 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 177ms. Found 4 repository interfaces.
+2020-12-22 21:35:10,363 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$33b767ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-22 21:35:10,954 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8095 (http)
+2020-12-22 21:35:11,005 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-12-22 21:35:11,005 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2020-12-22 21:35:11,186 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-12-22 21:35:11,186 INFO org.springframework.web.context.ContextLoader [main] Root WebApplicationContext: initialization completed in 3470 ms
+2020-12-22 21:35:11,552 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-12-22 21:35:11,810 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-12-22 21:35:11,912 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-22 21:35:12,071 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2020-12-22 21:35:12,075 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2020-12-22 21:35:12,321 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-12-22 21:35:12,569 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-22 21:35:14,042 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 21:35:15,503 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-22 21:35:15,747 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5aa6da2, org.springframework.security.web.context.SecurityContextPersistenceFilter@84f51d9, org.springframework.security.web.header.HeaderWriterFilter@32b46831, org.springframework.web.filter.CorsFilter@1a0d313, org.springframework.security.web.authentication.logout.LogoutFilter@1584c019, com.example.demo.security.JWTAuthenticationFilter@13908f9c, com.example.demo.security.JWTAuthenticationVerficationFilter@329b331f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8383a14, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d92e8e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@640a8f93, org.springframework.security.web.session.SessionManagementFilter@320ff86f, org.springframework.security.web.access.ExceptionTranslationFilter@2e29f28e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3739f3c9]
+2020-12-22 21:35:16,127 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 21:35:16,562 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8095 (http) with context path ''
+2020-12-22 21:35:16,573 INFO com.example.demo.SareetaApplication [main] Started SareetaApplication in 9.58 seconds (JVM running for 10.646)
+2020-12-22 21:35:43,463 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8095-exec-10] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-22 21:35:43,464 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8095-exec-10] Initializing Servlet 'dispatcherServlet'
+2020-12-22 21:35:43,488 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8095-exec-10] Completed initialization in 23 ms
+2020-12-22 21:35:44,286 INFO com.example.demo.controllers.UserController [http-nio-8095-exec-10] User added with the username: shopper.
+2020-12-22 21:35:55,846 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8095-exec-8] HHH000397: Using ASTQueryTranslatorFactory
+2020-12-22 21:36:29,525 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-7] Add Item 1 for username: shopper
+2020-12-22 21:36:29,601 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-7] Item added 1 for username: shopper
+2020-12-22 21:36:53,443 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-6] Get orders for username: shopper
+2020-12-22 21:36:53,449 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-6] Orders for username: shopper
+2020-12-22 21:37:08,285 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-5] Submit order for username: shopper
+2020-12-22 21:37:08,308 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-5] Order submitted for username: shopper
+2020-12-22 21:37:30,349 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-4] Get orders for username: shopper
+2020-12-22 21:37:30,353 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-4] Orders for username: shopper
