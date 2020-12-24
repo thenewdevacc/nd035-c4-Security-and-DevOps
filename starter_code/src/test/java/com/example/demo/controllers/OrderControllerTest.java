@@ -11,12 +11,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.mockito.Spy;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.*;
@@ -41,21 +40,20 @@ public class OrderControllerTest {
     @Test
     public void submit() {
         User user = new User();
-        user.setUsername("test");
-        user.setPassword("testPassword");
+        user.setUsername("user");
+        user.setPassword("password");
         user.setId(1L);
 
         Item item = new Item();
         item.setId(2L);
-        item.setName("newItem");
+        item.setName("Item");
         item.setPrice(BigDecimal.ONE);
-        item.setDescription("newDescription");
-        List<Item> listItems = new ArrayList<>();
-        listItems.add(item);
-
+        item.setDescription("Item Description");
+        List<Item> items = new ArrayList<>();
+        items.add(item);
         Cart cart = new Cart();
         cart.setId(3L);
-        cart.setItems(listItems);
+        cart.setItems(items);
         cart.setTotal(BigDecimal.ONE);
         cart.setUser(user);
 
@@ -64,57 +62,53 @@ public class OrderControllerTest {
         UserOrder order = new UserOrder();
         order.setId(4L);
         order.setUser(user);
-        order.setItems(listItems);
+        order.setItems(items);
         order.setTotal(BigDecimal.ONE);
 
         doReturn(order).when(orderControllerSpy).createFromCartWrapper(cart);
-        when(userRepository.findByUsername("test")).thenReturn(user);
+        when(userRepository.findByUsername("user")).thenReturn(user);
         when(orderRepository.save(order)).thenReturn(order);
 
-        ResponseEntity<UserOrder> response = orderController.submit("test");
+        ResponseEntity<UserOrder> response = orderController.submit("user");
         assertNotNull(response);
-        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(HttpStatus.OK, response.getStatusCode());
 
         UserOrder result = response.getBody();
         assertEquals(user, result.getUser());
-        assertEquals(listItems, result.getItems());
+        assertEquals(items, result.getItems());
         assertEquals(BigDecimal.ONE, result.getTotal());
     }
 
     @Test
     public void getOrdersForUser() {
         User user = new User();
-        user.setUsername("test");
-        user.setPassword("testPassword");
+        user.setUsername("user");
+        user.setPassword("password");
         user.setId(1L);
 
         Item item = new Item();
         item.setId(2L);
-        item.setName("newItem");
+        item.setName("Item");
         item.setPrice(BigDecimal.ONE);
-        item.setDescription("newDescription");
-        List<Item> listItems = new ArrayList<>();
-        listItems.add(item);
-
+        item.setDescription("Item Description");
+        List<Item> items = new ArrayList<>();
+        items.add(item);
         UserOrder order = new UserOrder();
         order.setId(4L);
         order.setUser(user);
-        order.setItems(listItems);
+        order.setItems(items);
         order.setTotal(BigDecimal.ONE);
         List<UserOrder> listOrders = new ArrayList<>();
         listOrders.add(order);
-
-        when(userRepository.findByUsername("test")).thenReturn(user);
+        when(userRepository.findByUsername("user")).thenReturn(user);
         when(orderRepository.findByUser(user)).thenReturn(listOrders);
-
-        ResponseEntity<List<UserOrder>> response = orderController.getOrdersForUser("test");
+        ResponseEntity<List<UserOrder>> response = orderController.getOrdersForUser("user");
         assertNotNull(response);
-        assertEquals(200, response.getStatusCodeValue());
-
+        assertEquals(HttpStatus.OK, response.getStatusCode());
         List<UserOrder> result = response.getBody();
         UserOrder resultOrder = result.get(0);
         assertEquals(user, resultOrder.getUser());
-        assertEquals(listItems, resultOrder.getItems());
+        assertEquals(items, resultOrder.getItems());
 
     }
 }
