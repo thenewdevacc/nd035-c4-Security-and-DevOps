@@ -1,11 +1,9 @@
 package com.example.demo.controllers;
 
-import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.HttpClientErrorException.BadRequest;
 
 import com.example.demo.model.persistence.Cart;
 import com.example.demo.model.persistence.User;
@@ -39,11 +36,13 @@ public class UserController {
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
+		log.info("GET USER with User Id {}.",id);
 		return ResponseEntity.of(userRepository.findById(id));
 	}
 	
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
+		log.info("GET USER with Username {}.",username);
 		User user = userRepository.findByUsername(username);
 		log.info("User with username {} requested.",username);
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
@@ -51,19 +50,20 @@ public class UserController {
 	
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+		log.info("ADD USER with Username {}.",createUserRequest.getUsername());
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		Cart cart = new Cart();
 		user.setCart(cart);
 		if(createUserRequest.getPassword().length()<7 || 
 		!(createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword()))){
-			log.error("Error with user password. Cannot create the user {}",createUserRequest.getUsername());
+			log.error("PASSWORD VALIDATION FAILED. Cannot add with Username {}.",createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		cartRepository.save(cart);
 		userRepository.save(user);
-		log.info("User added with the username: {}.",createUserRequest.getUsername());
+		log.info("USER ADDED with Username: {}.",createUserRequest.getUsername());
 		return ResponseEntity.ok(user);
 	}
 	
