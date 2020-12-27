@@ -75,3 +75,57 @@
 2020-12-27 09:48:56,021 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-6] ORDER SUBMITTED for Username: shopper.
 2020-12-27 09:49:02,628 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-7] GET ORDERS for Username: shopper.
 2020-12-27 09:49:02,632 INFO com.example.demo.controllers.CartController [http-nio-8095-exec-7] ORDERS for Username: shopper.
+2020-12-27 13:53:46,939 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on DESKTOP-QCVN3ET with PID 16540 (C:\Projects\ecommerce\nd035-c4-Security-and-DevOps\starter_code\target\classes started by anubh in c:\Projects\ecommerce\nd035-c4-Security-and-DevOps\starter_code)
+2020-12-27 13:53:46,945 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2020-12-27 13:53:48,077 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-27 13:53:48,170 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 80ms. Found 4 repository interfaces.
+2020-12-27 13:53:48,914 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$353000b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-27 13:53:49,439 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8095 (http)
+2020-12-27 13:53:49,492 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-12-27 13:53:49,493 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2020-12-27 13:53:49,770 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-12-27 13:53:49,770 INFO org.springframework.web.context.ContextLoader [main] Root WebApplicationContext: initialization completed in 2667 ms
+2020-12-27 13:53:50,220 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-12-27 13:53:50,512 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-12-27 13:53:50,613 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-27 13:53:50,806 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2020-12-27 13:53:50,811 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2020-12-27 13:53:51,132 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-12-27 13:53:51,502 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-27 13:53:52,802 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-27 13:53:54,147 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-27 13:53:54,297 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c8b10b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@5353dd09, org.springframework.security.web.header.HeaderWriterFilter@22686ddb, org.springframework.web.filter.CorsFilter@1410d645, org.springframework.security.web.authentication.logout.LogoutFilter@cd5ff55, com.example.demo.security.JWTAuthenticationFilter@4ccdacf5, com.example.demo.security.JWTAuthenticationVerficationFilter@5aa6da2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@192b472d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e3ee128, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a0d313, org.springframework.security.web.session.SessionManagementFilter@7bfa1eb5, org.springframework.security.web.access.ExceptionTranslationFilter@63a7781, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18989e0]
+2020-12-27 13:53:54,556 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-27 13:53:54,853 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8095 (http) with context path ''
+2020-12-27 13:53:54,856 INFO com.example.demo.SareetaApplication [main] Started SareetaApplication in 8.491 seconds (JVM running for 9.311)
+2020-12-27 13:54:24,071 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8095-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-27 13:54:24,072 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8095-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-12-27 13:54:24,092 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8095-exec-2] Completed initialization in 20 ms
+2020-12-27 13:54:24,446 INFO com.example.demo.controllers.UserController [http-nio-8095-exec-2] ADD USER with Username shopper.
+2020-12-27 13:54:24,646 ERROR com.example.demo.controllers.UserController [http-nio-8095-exec-2] PASSWORD VALIDATION FAILED. Cannot add with Username shopper.
+2020-12-27 13:54:48,951 INFO com.example.demo.controllers.UserController [http-nio-8095-exec-4] ADD USER with Username shopper.
+2020-12-27 13:54:49,073 INFO com.example.demo.controllers.UserController [http-nio-8095-exec-4] USER ADDED with Username: shopper.
+2020-12-27 13:55:02,352 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8095-exec-5] HHH000397: Using ASTQueryTranslatorFactory2020-12-27 13:56:55,092 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8095-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+2020-12-27 13:58:02,284 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2020-12-27 13:58:02,309 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-27 13:58:02,348 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8095 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8095, or configure this application to listen on another port.
+
+2020-12-27 13:58:02,354 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [main] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-27 13:58:02,552 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-27 13:58:02,556 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2020-12-27 13:58:02,605 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
