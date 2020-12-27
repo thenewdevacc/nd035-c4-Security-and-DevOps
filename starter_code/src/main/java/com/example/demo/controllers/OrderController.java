@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.persistence.Cart;
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.UserOrder;
-import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.OrderRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 
@@ -57,4 +56,8 @@ public class OrderController {
 		log.info("ORDERS for Username: {}.", username);
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
+
+	public UserOrder createFromCartWrapper(Cart cart) {
+        return UserOrder.createFromCart(cart);
+    }
 }
