@@ -129,3 +129,88 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-12-27 13:58:02,552 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-27 13:58:02,556 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
 2020-12-27 13:58:02,605 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2020-12-27 14:42:15,314 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on DESKTOP-QCVN3ET with PID 18740 (C:\Projects\ecommerce\nd035-c4-Security-and-DevOps\starter_code\target\classes started by anubh in c:\Projects\ecommerce\nd035-c4-Security-and-DevOps\starter_code)
+2020-12-27 14:42:15,319 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2020-12-27 14:42:17,040 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-27 14:42:17,294 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 227ms. Found 4 repository interfaces.
+2020-12-27 14:42:18,765 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b4a70b72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-27 14:42:19,664 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8095 (http)
+2020-12-27 14:42:19,736 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2020-12-27 14:42:19,737 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2020-12-27 14:42:20,120 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2020-12-27 14:42:20,120 INFO org.springframework.web.context.ContextLoader [main] Root WebApplicationContext: initialization completed in 4637 ms
+2020-12-27 14:42:20,703 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-12-27 14:42:20,967 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-12-27 14:42:21,101 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-12-27 14:42:21,307 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2020-12-27 14:42:21,315 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2020-12-27 14:42:21,604 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-12-27 14:42:22,016 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-27 14:42:23,605 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-27 14:42:25,746 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-27 14:42:25,934 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44abdb1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e7bc939, org.springframework.security.web.header.HeaderWriterFilter@6e93b0e7, org.springframework.web.filter.CorsFilter@62108cd3, org.springframework.security.web.authentication.logout.LogoutFilter@e972ee1, com.example.demo.security.JWTAuthenticationFilter@7cd1ec54, com.example.demo.security.JWTAuthenticationVerficationFilter@77ab5214, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fc1a8f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33a47707, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d420cdd, org.springframework.security.web.session.SessionManagementFilter@62cd562d, org.springframework.security.web.access.ExceptionTranslationFilter@1cc41b77, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5aab5b31]
+2020-12-27 14:42:26,287 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-27 14:42:26,647 ERROR org.apache.catalina.util.LifecycleBase [main] Failed to start component [Connector[HTTP/1.1-8095]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.example.demo.SareetaApplication.main(SareetaApplication.java:22)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:239)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1116)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1202)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005)
+	... 14 common frames omitted
+2020-12-27 14:42:26,679 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2020-12-27 14:42:26,693 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-12-27 14:42:26,707 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-27 14:42:26,711 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8095 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8095, or configure this application to listen on another port.
+
+2020-12-27 14:42:26,716 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [main] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-27 14:42:26,721 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-27 14:42:26,724 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2020-12-27 14:42:26,731 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
